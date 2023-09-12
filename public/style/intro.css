@@ -1,0 +1,148 @@
+#intro-container {
+    width: 100%;
+    height: 600px;
+    margin: auto;
+    z-index: 2;
+    display: flex;
+    justify-content: flex-start;
+}
+
+#introduction {
+    flex: 1;
+    height: inherit;
+    vertical-align: top;
+    display: flex;
+    flex-direction: column;
+}
+
+#introduction-bullets {
+    list-style: none;
+    list-style-position: outside;
+    padding-left: 30px;
+    flex-grow: 1;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 36px;
+}
+
+#introduction-bullets>li {
+    text-indent: -30px;
+}
+
+.bullet-icon {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 8px;
+    margin-bottom: 3px;
+}
+
+#slideshow-container {
+    flex: 1;
+    height: inherit;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide {
+    z-index: 0;
+    opacity: 1;
+    position: absolute;
+    width: 480px;
+    height: 480px;
+    background-position: center;
+    background-size: cover;
+    /* cursor: pointer; */
+}
+
+.first-slide {
+    opacity: 1;
+}
+
+#slide-frame {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: linear-gradient(to bottom right, rgb(128, 128, 128), rgb(36, 36, 36));
+    border-radius: 1px;
+    z-index: 1;
+}
+
+.slide-background {
+    position: absolute;
+    width: 480px;
+    height: 480px;
+    background-position: center;
+    background-size: cover;
+    background-color: white;
+    z-index: 1;
+}
+
+.slide-frame-outline {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border: rgb(36, 36, 36, 0.8) solid 1px;
+}
+
+#slide-frame-outline-horizontal {
+    width: 504px;
+    height: 480px;
+    transform: translate(-50%, -50%);
+    border-top: none;
+    border-bottom: none;
+}
+
+#slide-frame-outline-vertical {
+    width: 480px;
+    height: 504px;
+    transform: translate(-50%, -50%);
+    border-right: none;
+    border-left: none;
+}
+
+.slide.appear {
+    animation: fadeIn 0.5s forwards;
+}
+
+.slide.disappear {
+    animation: fadeOut 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.caption {
+    width: 300px;
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 8px;
+    font-size: 12px;
+    text-align: center;
+    font-weight: bold;
+}

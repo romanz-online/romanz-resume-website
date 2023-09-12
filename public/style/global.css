@@ -1,0 +1,94 @@
+body,
+html {
+    background-color: #0F0F0F;
+    font-family: "Karla";
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    color: #272727;
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+section {
+    width: 100%;
+    height: 600px;
+    position: relative;
+    border-bottom: 2px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section-background {
+    width: inherit;
+    height: inherit;
+    z-index: 1;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+
+
+
+/* WebKit-based browsers */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #777;
+    border-radius: 10px;
+}
+
+/* Firefox */
+::-moz-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-moz-scrollbar-thumb {
+    background: #777;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+#resume-back-button {
+    position: absolute;
+    bottom: 16px;
+    left: 0;
+    width: 95px;
+    height: 54px;
+    border-radius: 0 3px 3px 0;
+    background-color: rgba(250, 250, 250, 0.95);
+    text-decoration: none;
+    color:#272727;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: capitalize;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+    user-select: none;
+    transition: all 100ms linear;
+    box-shadow: 2px 2px 3px #202129;
+}
+
+#resume-back-button:hover {
+    background-color: rgba(250, 250, 250, 0.85);
+}

@@ -1,0 +1,23 @@
+{
+  "name": "personalwebsite_html",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/romanz-online/personalwebsite_html.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/romanz-online/personalwebsite_html/issues"
+  },
+  "homepage": "https://github.com/romanz-online/personalwebsite_html#readme",
+  "dependencies": {
+    "nodemailer": "^6.9.5",
+    "serve-static": "^1.15.0"
+  }
+}

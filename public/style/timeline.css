@@ -1,0 +1,241 @@
+:root {
+    --white: #fff;
+    --black: #323135;
+    --crystal: #a8dadd;
+    --columbia-blue: #cee9e4;
+    --midnight-green: #01565b;
+    --yellow: #e5f33d;
+    --timeline-gradient: rgba(206, 233, 228, 1) 0%, rgba(206, 233, 228, 1) 50%,
+        rgba(206, 233, 228, 0) 100%;
+}
+
+.timeline {
+    position: relative;
+    white-space: nowrap;
+    width: 100%;
+    display: grid;
+}
+
+.timeline .line {
+    position: absolute;
+    display: inline-block;
+    margin-top: 400px;
+    width: 100%;
+    height: 5px;
+    background: var(--white);
+}
+
+.timeline ol::-webkit-scrollbar {
+    height: 12px;
+}
+
+.timeline ol::-webkit-scrollbar-thumb,
+.timeline ol::-webkit-scrollbar-track {
+    border-radius: 92px;
+}
+
+.timeline ol::-webkit-scrollbar-thumb {
+    background: var(--midnight-green);
+}
+
+.timeline ol::-webkit-scrollbar-track {
+    justify-content: center;
+    background: var(--yellow);
+}
+
+.timeline ol::-webkit-scrollbar-button:start:increment {
+    width: 40%;
+    display: block;
+    background: transparent;
+}
+
+.timeline ol::-webkit-scrollbar-button:end:increment {
+    width: 40%;
+    display: block;
+    background: transparent;
+}
+
+.timeline ol {
+    z-index: 2;
+    font-size: 0;
+    width: 100%;
+    padding-top: 400px;
+    transition: all 1s;
+    /* overflow-x: scroll; */
+    overflow-x: hidden;
+    /* scroll-snap-type: x mandatory; */
+    scrollbar-color: var(--yellow) var(--midnight-green);
+}
+
+.timeline ol li {
+    position: relative;
+    display: inline-block;
+    list-style-type: none;
+    width: 100px;
+    height: 5px;
+    background: var(--white);
+    /* scroll-snap-align: start; */
+}
+
+.timeline ol li:last-child {
+    width: 340px;
+}
+
+.timeline ol li:not(:first-child) {
+    margin-left: 14px;
+}
+
+.timeline ol li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    bottom: 0;
+    width: 16px;
+    height: 16px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background: var(--midnight-green);
+    z-index: 1;
+}
+
+.timeline ol li div::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    border-left: 3px solid white;
+    color: transparent;
+}
+
+.timeline ol li div .arrow {
+    position: absolute;
+    top: calc(-100% + 20px);
+    /* left: -17px; */
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    height: 40px;
+}
+
+.timeline ol li div {
+    position: absolute;
+    left: calc(100% + 6px);
+    width: fit-content;
+    white-space: nowrap;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 16px;
+    padding-right: 16px;
+    font-size: 13px;
+    color: var(--black);
+    background: var(--white);
+    border-radius: 0 2px 2px 2px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.timeline ol li:nth-child(even) div.animated {
+    animation: 1600ms pulsate-even infinite alternate ease-in-out;
+}
+
+.timeline ol li:nth-child(odd) div.animated {
+    animation: 1600ms pulsate-odd infinite alternate ease-in-out;
+}
+
+
+/* find a way to get rid of these translates and just make everything look nicer */
+.timeline ol li:nth-child(even) div:hover {
+    transform: scale(1.05) translateX(2px);
+}
+
+.timeline ol li:nth-child(odd) div:hover {
+    transform: scale(1.05) translateX(5px) translateY(-100%);
+}
+
+@keyframes pulsate-odd {
+    0% {
+        transform: scale(1.04) translateX(3px) translateY(-100%);
+    }
+
+    50% {
+        transform: scale(1) translateX(0px) translateY(-100%);
+    }
+
+    100% {
+        transform: scale(1.04) translateX(3px) translateY(-100%);
+    }
+}
+
+@keyframes pulsate-even {
+    0% {
+        transform: scale(1.04) translateX(3px);
+    }
+
+    50% {
+        transform: scale(1) translateX(0px);
+    }
+
+    100% {
+        transform: scale(1.04) translateX(3px);
+    }
+}
+
+.timeline ol li:nth-child(odd) div {
+    top: -16px;
+    transform: translateY(-100%);
+    border-radius: 2px 2px 2px 0;
+}
+
+.timeline ol li:nth-child(odd) div::before {
+    top: 100%;
+}
+
+.timeline ol li:nth-child(even) div {
+    top: calc(100% + 16px);
+}
+
+.timeline ol li:nth-child(even) div::before {
+    top: -16px;
+}
+
+.timeline time {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: var(--midnight-green);
+}
+
+
+
+
+
+
+
+
+
+#timeline-info {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 6px;
+    padding-left: 12px;
+    padding-right: 26px;
+    z-index: 2;
+    width: 540px;
+    height: 240px;
+    white-space: normal;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#timeline-info>h1 {
+    padding-bottom: 4px;
+    border-bottom: 1px solid #ddd;
+}

@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap">
+
+    <link rel="stylesheet" href="style/global.css">
+
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="jquery-3.7.0.min.js"></script>
+    <script src="resume-page.js"></script>
+</head>
+
+<body style="background-color: white; font-size: 16px;">
+    <div id="resume-control" style="width: 100%; text-align: center; align-items: center; padding-top: 200px;">
+        Pressing this button will trigger a captcha check and then show the PDF.
+        <br>
+        (This is to prevent bots from scraping it. Thanks for your understanding.)
+        <br>
+        <br>
+        <button id="resume-captcha" class="g-recaptcha" data-sitekey="6Ldv_X8nAAAAAMzesXzJAb8yfAw2TnoOcLKjKEy-"
+            data-callback='onCaptchaSuccess' data-action='submit' style="width: 72px; height: 32px;">
+            SUBMIT
+        </button>
+    </div>
+
+    <div id="resume-container"></div>
+
+    <a id="resume-back-button" href="index.html#end-section">
+        <div style="margin-bottom: 2px;">&#11164</div>&nbsp;BACK
+    </a>
+</body>
+
+</html>

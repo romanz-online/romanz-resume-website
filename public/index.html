@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="Description" content="Roman Zinoviev's Personal Website">
+    <meta name="Keywords" content="Roman, Zinoviev, Software, Dune, Programming">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon//site.webmanifest">
+    <link rel="mask-icon" href="favicon//safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Roman Zinoviev</title>
+
+    <link rel="preconnect" type="text/css" href="https://fonts.googleapis.com">
+    <link rel="preconnect" type="text/css" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" type="text/css"
+        href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap">
+    <link rel="stylesheet" type="text/css"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap">
+
+    <link rel="stylesheet" type="text/css" href="style/global.css">
+    <link rel="stylesheet" type="text/css" href="style/welcome.css">
+    <link rel="stylesheet" type="text/css" href="style/intro.css">
+    <link rel="stylesheet" type="text/css" href="style/skills.css">
+    <link rel="stylesheet" type="text/css" href="style/timeline.css">
+    <link rel="stylesheet" type="text/css" href="style/infocard.css">
+    <link rel="stylesheet" type="text/css" href="style/quiz.css">
+    <link rel="stylesheet" type="text/css" href="style/end.css">
+    <link rel="stylesheet" type="text/css" href="style/popup.css">
+
+    <script src="jquery-3.7.0.min.js"></script>
+    <script src="source.js"></script>
+    <script>
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
+            window.location.href = 'mobile-index.html';
+    </script>
+</head>
+
+<body style="
+    background-image: url('images/dune_wallpaper.jpg');
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+  ">
+    <div id="stars" style="z-index: -1; height: 100vh; position: fixed;"></div>
+    <div id="email-popup-backdrop"></div>
+
+    <section id="welcome-section" style="height: 100vh; border: none;">
+        <div class="fade-in-container">
+            <div class="fade-in-line">Welcome, knowledge seekers,</div>
+            <div class="fade-in-line">to the online repose of Roman Zinoviev.</div>
+            <div class="fade-in-line">Let none of your questions go unanswered.</div>
+        </div>
+        <div id="welcome-gradient-container">
+            <div id="welcome-gradient"></div>
+            <a id="continue-arrow-container" href="#intro-section">
+                <div id="continue-arrow"></div>
+            </a>
+        </div>
+        <a href="#end-section">
+            <button id="skip-button">Hire Right Away!</button>
+        </a>
+    </section>
+
+
+    <section id="intro-section">
+        <div id="intro-container">
+            <div id="slideshow-container">
+                <div id="slide-frame">
+                    <div id="slide-frame-outline-horizontal" class="slide-frame-outline"></div>
+                    <div id="slide-frame-outline-vertical" class="slide-frame-outline"></div>
+                </div>
+                <div class="slide-background">
+                    <!-- <div class="slide" style="background-image: url(images/me/me_graduation.jpg);"> -->
+                    <!-- <div class="caption">Helping my Friend Graduate</div> -->
+                    <!-- </div> -->
+                    <!-- <div class="slide" style="background-image: url(images/me/me_cat_cafe.png);">
+                        <div class="caption">Respecting the Cat's Personal Boundaries</div>
+                    </div> -->
+                    <div class="slide" style="background-image: url(images/me/me_monkey.jpg);">
+                        <div class="caption">Brightening a Local Monkey's Day</div>
+                    </div><!-- 
+                    <div class="slide" style="background-image: url(images/me/bocchi_roman_cropped.png);">
+                        <div class="caption">Filler Space</div>
+                    </div>
+                    <div class="slide" style="background-image: url(images/me/rosemary_drink_bleach_cropped.png);">
+                        <div class="caption">Filler Space</div>
+                    </div> -->
+                </div>
+            </div>
+            <div id="introduction">
+                <div style="font-size: 32px; padding-top: 50px;">
+                    <b>Who is Roman Zinoviev?</b>
+                </div>
+                <ul id="introduction-bullets">
+                    <li>
+                        <img class="bullet-icon" src="images/star_bullet.svg">
+                        Stony Brook University Alumnus with a Bachelor's Degree in Computer Science
+                    </li>
+                    <li>
+                        <img class="bullet-icon" src="images/star_bullet.svg">
+                        Young but Experienced Software Engineer
+                    </li>
+                    <li>
+                        <img class="bullet-icon" src="images/star_bullet.svg">
+                        Genius Web Developer
+                    </li>
+                    <li>
+                        <img class="bullet-icon" src="images/star_bullet.svg">
+                        Eloquent, Intelligent Writer
+                    </li>
+                    <li>
+                        <img class="bullet-icon" src="images/star_bullet.svg">
+                        Fantasy and Sci-Fi Enjoyer
+                    </li>
+                    <li>
+                        <img class="bullet-icon" src="images/star_bullet.svg">
+                        Amateur Comedian
+                    </li>
+                </ul>
+                <div style="font-size: 24px; font-weight: bold; padding-bottom: 50px;">
+                    Frank Herbert said, <i>"He who controls the Roman controls the universe."</i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="skills-section" style="height: 540px;">
+        <div id="skills-container">
+            <div class="skills-child">
+                <div id="skills-grid-title">My technical skills include...</div>
+                <div id="skills-grid">
+                    <div class="skill-item" style="background-image: url(images/skills_icons/C++_icon.svg);"
+                        data-value="0"></div>
+                    <div class="skill-item" style="background-image: url(images/skills_icons/C_icon.svg);"
+                        data-value="1"></div>
+                    <div class="skill-item" style="background-image: url(images/skills_icons/django_icon.svg);"
+                        data-value="2"></div>
+                    <div class="skill-item" style="background-image: url(images/skills_icons/git_icon.svg);"
+                        data-value="3"></div>
+                    <div class="skill-item" style="background-image: url(images/skills_icons/java_icon.svg);"
+                        data-value="4"></div>
+                    <div class="skill-item" style="background-image: url(images/skills_icons/JS_icon.svg);"
+                        data-value="5"></div>
+                    <div class="skill-item" style="background-image: url(images/skills_icons/opencv_icon.svg);"
+                        data-value="6"></div>
+                    <div class="skill-item" style="background-image: url(images/skills_icons/python_icon.svg);"
+                        data-value="7"></div>
+                    <div class="skill-item" style="background-image: url(images/skills_icons/pytorch_icon.svg);"
+                        data-value="8"></div>
+                    <div class="skill-item" style="background-image: url(images/skills_icons/Qt_icon.svg);"
+                        data-value="9"></div>
+                    <div class="skill-item" style="background-image: url(images/skills_icons/Ruby_on_Rails_icon.svg);"
+                        data-value="10"></div>
+                    <div class="skill-item" style="background-image: url(images/skills_icons/shell_icon.svg);"
+                        data-value="11"></div>
+                    <div class="skill-item" style="background-image: url(images/skills_icons/SQL_icon.svg);"
+                        data-value="12"></div>
+                    <div class="skill-item" style="background-image: url(images/skills_icons/tensorflow_icon.svg);"
+                        data-value="13"></div>
+                    <div class="skill-item" style="background-image: url(images/skills_icons/assembly_icon.svg);"
+                        data-value="14"></div>
+                </div>
+                <div id="skills-grid-description"></div>
+            </div>
+            <div class="skills-child" style="
+                background-image: url('images/skills_header.png');
+                position: relative;
+                background-size: 95% auto;
+                background-repeat: no-repeat;
+                background-position: left center;">
+            </div>
+        </div>
+    </section>
+
+
+    <section id="roman-quote-section"
+        style="height: 140px; text-align: center; font-size: 20px; font-weight: bold; font-style: italic;">
+        <span style="padding-top: 16px;">
+            Roman says, "You shall not endure. Drink when you want to drink. Eat when you want to eat. Hire Roman
+            when you want to hire Roman. You might not get the chance tomorrow..."
+            <img class="bullet-icon" src="images/tea-cup.svg"
+                style="padding-left: 20px; padding-bottom: 16px; width: 32px; height: 32px;">
+        </span>
+    </section>
+
+
+    <section id="timeline-section" class="timeline">
+        <div id="timeline-info">
+            <h1 id="timeline-info-title">YOU ARE HERE</h1>
+            <div id="timeline-info-description">Click on a milestone to learn about my experiences.</div>
+        </div>
+        <img id="timeline-background" src="images/dune_wallpaper_extended_with_paul_no_title.jpg" height="100%"
+            width="auto"
+            style="position: absolute; top: 0; left: 100%; transform: translateX(-50%); transition: left 1s ease; z-index: 0;">
+        <div class="line"></div>
+        <ol>
+            <li>
+                <div data-value="0">
+                    <time>2017</time>
+                    Began University
+                </div>
+            </li>
+            <li>
+                <div data-value="1">
+                    <time>2018</time>
+                    Internship
+                </div>
+            </li>
+            <li>
+                <div data-value="2">
+                    <time>2018</time>
+                    User Management Plugin
+                </div>
+            </li>
+            <li>
+                <div data-value="3">
+                    <time>2019</time>
+                    College TA
+                </div>
+            </li>
+            <li>
+                <div data-value="4">
+                    <time>2021</time>
+                    Joined Company
+                </div>
+            </li>
+            <li>
+                <div data-value="5">
+                    <time>2021</time>
+                    Neuromodulation Work
+                </div>
+            </li>
+            <li>
+                <div data-value="6">
+                    <time>2021</time>
+                    Graduated
+                </div>
+            </li>
+            <li>
+                <div data-value="7">
+                    <time>2021</time>
+                    Electric Grill Work
+                </div>
+            </li>
+            <li>
+                <div data-value=8>
+                    <time>2023</time>
+                    Fluorescence Device Work
+                </div>
+            </li>
+            <li>
+                <div data-value="9">
+                    <time>2023</time>
+                    Made Website
+                </div>
+            </li>
+            <li>
+                <div data-value="10" style="width: 114px;">
+                    <time style="position: absolute; top: 50%; transform: translateY(-50%);">YOU ARE HERE</time>
+                </div>
+            </li>
+            <li></li>
+        </ol>
+    </section>
+
+
+    <section id="flashcard-section">
+        <div id="qa-container">
+            <div>Hiring Roman Q&A</div>
+            <div id="flashcard-container">
+                <div id="flashcard1" class="flashcard">
+                    <div class="front">
+                        <div style="background-image: url(images/moon_phases/full_moon_orange.png);"></div>
+                        <p>Are you looking to hire someone new but are worried that they won't be able to adapt?</p>
+                    </div>
+                    <div class="back">
+                        <div style="background-image: url(images/moon_phases/new_moon_orange.png);"></div>
+                        <p>
+                            <b>Hire Roman!</b>
+                            <br><br>
+                            I learn fast and acclimate quickly. Throw me into any position and I'll be thriving in just
+                            one or two days.
+                            <br><br>
+                            <b>Weeks of training are wholly unnecessary.</b>
+                        </p>
+                    </div>
+                </div>
+                <div id="flashcard2" class="flashcard">
+                    <div class="front">
+                        <div style="background-image: url(images/moon_phases/waning_gibbus_orange.png);"></div>
+                        <p>
+                            Have you been searching for ways to improve productivity and foster creativity?
+                        </p>
+                    </div>
+                    <div class="back">
+                        <div style="background-image: url(images/moon_phases/waxing_crescent_orange.png);"></div>
+                        <p>
+                            <b>Hiring Roman might be the answer.</b>
+                            <br><br>
+                            I work efficiently, independently and intelligently.
+                            <br><br>
+                            Throwing a maverick into the mix might just be how you <b>tap into your team's hidden
+                                potential.</b>
+                        </p>
+                    </div>
+                </div>
+                <div id="flashcard3" class="flashcard">
+                    <div class="front">
+                        <div style="background-image: url(images/moon_phases/last_quarter_orange.png);"></div>
+                        <p>
+                            Are you tired of new hires who flounder around, not knowing what to do until they're told?
+                        </p>
+                    </div>
+                    <div class="back">
+                        <div style="background-image: url(images/moon_phases/first_quarter_orange.png);"></div>
+                        <p>
+                            <b>Then it would be right to hire Roman!</b>
+                            <br><br>
+                            I hate having no responsibilities. I'll make sure that the work I do is good and the team is
+                            moving efficiently around me.
+                            <br><br>
+                            <b>I'll even lead the team if you let me.</b>
+                        </p>
+                    </div>
+                </div>
+                <div id="flashcard4" class="flashcard">
+                    <div class="front">
+                        <div style="background-image: url(images/moon_phases/waning_crescent_orange.png);"></div>
+                        <p>
+                            Do you have no worries in particular and are happy with the way your projects are going?
+                        </p>
+                    </div>
+                    <div class="back">
+                        <div style="background-image: url(images/moon_phases/waxing_gibbus_orange.png)"></div>
+                        <p>
+                            <b>All the more reason to hire Roman!</b>
+                            <br><br>
+                            People who hire me often marvel at the expediency and efficiency I bring, even to a
+                            functional team.
+                            <br><br>
+                            With me, everything will suddenly start to run smoother, seemingly
+                            <b>with no intervention at all</b>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- <section id="quiz-section" style="height: 1000px; flex-direction: row; z-index: 2;">
+        <div style="position: relative; max-width: 800px;">
+            <div style="padding-top: 2rem; padding-bottom: 4rem;">
+                <p style="font-size: 24px; text-align: center;">
+                    <strong>
+                        Is hiring Roman right for you? Find out with this test!
+                    </strong>
+                </p>
+            </div>
+
+            <p class="range-question">Q1. Does your ideal hire show an admirable, even enviable sense of optimism?</p>
+            <span class="range-label-container">
+                <p class="range-value-left">Never</p>
+                <p class="range-value-right">All the Time</p>
+            </span>
+            <div class="range"></div>
+
+            <p class="range-question">Q2. Do you appreciate people who tell you where your operations can improve?</p>
+            <span class="range-label-container">
+                <p class="range-value-left">Not at all</p>
+                <p class="range-value-right">Strongly agree</p>
+            </span>
+            <div class="range"></div>
+
+            <p class="range-question">Q3. Do you think that 5 daily meetings, each only a couple of minutes long, could
+                instead be 1 or 2 longer, weekly meetings?</p>
+            <span class="range-label-container">
+                <p class="range-value-left">Not at all</p>
+                <p class="range-value-right">Strongly agree</p>
+            </span>
+            <div class="range"></div>
+
+            <p class="range-question">Q4. Does your ideal hire literally (not figuratively) spit at the idea of working
+                "hard" rather than "smart"?</p>
+            <span class="range-label-container">
+                <p class="range-value-left">Not at all</p>
+                <p class="range-value-right">Strongly agree</p>
+            </span>
+            <div class="range"></div>
+
+            <p class="range-question">Q5. A team member's chair is uncomfortable.
+                Does your ideal hire take initiative to find a more comfortable chair and provide top-notch assistance
+                in sitting in it?</p>
+            <span class="range-label-container">
+                <p class="range-value-left">Let them suffer</p>
+                <p class="range-value-right">Absolutely</p>
+            </span>
+            <div class="range"></div>
+
+            <div id="quiz-result-box">
+                <div id="quiz-result-box-score" style="font-size: 18px; font-weight: bold; line-height: 2.3;">
+                    Score:
+                    <span id="quiz-result-box-score-value" style="color: red; font-weight: bold;"></span>
+                </div>
+
+                <div id="quiz-result-box-suitability" style="font-size: 18px; font-weight: bold; line-height: 2.3;">
+                    Suitability:
+                    <span id="quiz-result-box-suitability-value" style="color: red; font-weight: bold;"></span>
+                </div>
+
+                <div id="quiz-result-box-description"></div>
+            </div>
+
+            <button id="submit-test-results">Test Results</button>
+        </div>
+    </section> -->
+
+
+    <section id="pre-end-section"
+        style="height: 140px; text-align: center; font-size: 24px; font-weight: bold; z-index: 2; line-height: 1.5;">
+        What are you waiting for?
+        <br>
+        <div style="font-size: 28px;">Hire Roman now!</div>
+    </section>
+
+
+    <section id="end-section" style="height: 100vh; border-bottom: none; background-color: #050608;">
+        <div id="end-info-box">
+            <div id="info-box" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                <span style="font-weight: bold; color: rgb(71, 65, 7);">
+                    <div style="float: left;">
+                        Website GitHub
+                    </div>
+                    <div style="float: right;">
+                        <a id="resume-button" href="resume.html" style="text-decoration: none;">Résumé</a>
+                    </div>
+                </span>
+                <br>
+                <br>
+                This is a partly satirical website made to promote me (Roman Zinoviev), both personally and
+                professionally.
+                If a more straightforward approach is what you're looking for, you can find most of the same information
+                on my résumé. You can also easily reach me with the button below.
+                <br>
+                <br>
+                <span id="contact-me-button" style="font-weight: bold; color: rgb(71, 65, 7); cursor: pointer;">
+                    Contact Me
+                </span>
+            </div>
+
+            <div id="email-box"
+                style="width: 100%; height: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                <h1 style="margin: 0; font-size: 40px; margin-top: -64px;">Contact Roman</h1>
+                <small style="font-size: 24px;">I'll get back to you when I feel like it.</small>
+
+                <form id="email-form">
+                    <input id="email-form-subject" placeholder="Subject" type="text" required />
+                    <textarea id="email-form-content" placeholder="Message"></textarea>
+                    <input id="email-form-sender" placeholder="Signature (& Email if applicable)" type="text"
+                        required />
+                    <span style="display: flex; justify-content: center;">
+                        <input id="cancel-email-button" class="form-button" type="button" value="Cancel" />
+                        <input id="send-email-button" class="form-button" type="submit" />
+                    </span>
+                </form>
+                <div id="email-box-sent-text"
+                    style="display: none; position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%); color: darkgreen; font-size: 16px;">
+                    Sent!</div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
